@@ -26,7 +26,7 @@ int main() {
 #include "util/mutexlock.h"
 #include "util/random.h"
 
-using GFLAGS::ParseCommandLineFlags;
+using GFLAGS_NAMESPACE::ParseCommandLineFlags;
 
 static const uint32_t KB = 1024;
 

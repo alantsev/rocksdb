@@ -272,9 +272,9 @@ class GranularLockImpl : public HashTableImpl<size_t, string> {
 // main
 //
 int main(int argc, char** argv) {
-  GFLAGS::SetUsageMessage(std::string("\nUSAGE:\n") + std::string(argv[0]) +
+  GFLAGS_NAMESPACE::SetUsageMessage(std::string("\nUSAGE:\n") + std::string(argv[0]) +
                           " [OPTIONS]...");
-  GFLAGS::ParseCommandLineFlags(&argc, &argv, false);
+  GFLAGS_NAMESPACE::ParseCommandLineFlags(&argc, &argv, false);
 
   //
   // Micro benchmark unordered_map

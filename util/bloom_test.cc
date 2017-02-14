@@ -24,7 +24,7 @@ int main() {
 #include "util/testutil.h"
 #include "util/arena.h"
 
-using GFLAGS::ParseCommandLineFlags;
+using GFLAGS_NAMESPACE::ParseCommandLineFlags;
 
 DEFINE_int32(bits_per_key, 10, "");
 

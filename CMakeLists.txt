@@ -62,6 +62,13 @@ else()
     include_directories(${SNAPPY_INCLUDE_DIR})
     list(APPEND THIRDPARTY_LIBS ${SNAPPY_LIBRARIES})
   endif()
+  option(WITH_GFLAGS "build with GFLAGS" OFF)
+  if(WITH_GFLAGS)
+    find_package(gflags REQUIRED)
+    add_definitions(-DGFLAGS)
+    include_directories(${GFLAGS_INCLUDE_DIR})
+    list(APPEND THIRDPARTY_LIBS ${GFLAGS_LIBRARIES})
+  endif()
 endif()
 
 if(WIN32)
@@ -477,7 +484,7 @@ if(WIN32)
   set(ROCKSDB_IMPORT_LIB rocksdb${ARTIFACT_SUFFIX})
   set(LIBS ${ROCKSDB_STATIC_LIB} ${THIRDPARTY_LIBS} ${SYSTEM_LIBS})
 else()
-  set(SYSTEM_LIBS ${CMAKE_THREAD_LIBS_INIT} rt)
+  # set(SYSTEM_LIBS ${CMAKE_THREAD_LIBS_INIT} rt)
   set(ROCKSDB_STATIC_LIB rocksdb${ARTIFACT_SUFFIX})
   set(ROCKSDB_SHARED_LIB rocksdb-shared)
   set(ROCKSDB_IMPORT_LIB ${ROCKSDB_SHARED_LIB})
@@ -658,7 +665,8 @@ set(BENCHMARKS
   util/cache_bench.cc
   db/memtablerep_bench.cc
   utilities/column_aware_encoding_exp.cc
-  utilities/persistent_cache/hash_table_bench.cc)
+  #  utilities/persistent_cache/hash_table_bench.cc
+)
 add_library(testharness OBJECT util/testharness.cc)
 foreach(sourcefile ${BENCHMARKS})
   get_filename_component(exename ${sourcefile} NAME_WE)

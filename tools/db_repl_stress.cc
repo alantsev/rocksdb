@@ -30,8 +30,8 @@ int main() {
 
 using namespace rocksdb;
 
-using GFLAGS::ParseCommandLineFlags;
-using GFLAGS::SetUsageMessage;
+using GFLAGS_NAMESPACE::ParseCommandLineFlags;
+using GFLAGS_NAMESPACE::SetUsageMessage;
 
 struct DataPumpThread {
   size_t no_records;

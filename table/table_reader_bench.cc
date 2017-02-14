@@ -28,8 +28,8 @@ int main() {
 #include "util/testharness.h"
 #include "util/testutil.h"
 
-using GFLAGS::ParseCommandLineFlags;
-using GFLAGS::SetUsageMessage;
+using GFLAGS_NAMESPACE::ParseCommandLineFlags;
+using GFLAGS_NAMESPACE::SetUsageMessage;
 
 namespace rocksdb {
 

@@ -33,7 +33,7 @@ int main() {
 #include "util/testharness.h"
 #include "utilities/merge_operators.h"
 
-using GFLAGS::ParseCommandLineFlags;
+using GFLAGS_NAMESPACE::ParseCommandLineFlags;
 
 DEFINE_bool(trigger_deadlock, false,
             "issue delete in range scan to trigger PrefixHashMap deadlock");

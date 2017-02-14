@@ -133,7 +133,7 @@ INSTANTIATE_TEST_CASE_P(
 int main(int argc, char** argv) {
   ::testing::InitGoogleTest(&argc, argv);
 #ifdef GFLAGS
-  GFLAGS::ParseCommandLineFlags(&argc, &argv, true);
+  GFLAGS_NAMESPACE::ParseCommandLineFlags(&argc, &argv, true);
 #endif  // GFLAGS
   return RUN_ALL_TESTS();
 }

@@ -32,7 +32,7 @@ int main() {
 #include "util/testutil.h"
 #include "util/stop_watch.h"
 
-using GFLAGS::ParseCommandLineFlags;
+using GFLAGS_NAMESPACE::ParseCommandLineFlags;
 
 DEFINE_int32(bits_per_key, 10, "");
 DEFINE_int32(num_probes, 6, "");

@@ -34,8 +34,8 @@ int main() {
 #include "util/testharness.h"
 #include "util/testutil.h"
 
-using GFLAGS::ParseCommandLineFlags;
-using GFLAGS::SetUsageMessage;
+using GFLAGS_NAMESPACE::ParseCommandLineFlags;
+using GFLAGS_NAMESPACE::SetUsageMessage;
 
 DEFINE_string(file_dir, "", "Directory where the files will be created"
     " for benchmark. Added for using tmpfs.");

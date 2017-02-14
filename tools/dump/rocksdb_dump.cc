@@ -30,7 +30,7 @@ DEFINE_string(db_options, "",
               "Options string used to open the database that will be dumped");
 
 int main(int argc, char** argv) {
-  GFLAGS::ParseCommandLineFlags(&argc, &argv, true);
+  GFLAGS_NAMESPACE::ParseCommandLineFlags(&argc, &argv, true);
 
   if (FLAGS_db_path == "" || FLAGS_dump_location == "") {
     fprintf(stderr, "Please set --db_path and --dump_location\n");

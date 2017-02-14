@@ -74,9 +74,9 @@ int main() {
 #include "rocksdb/slice.h"
 
 
-using GFLAGS::ParseCommandLineFlags;
-using GFLAGS::RegisterFlagValidator;
-using GFLAGS::SetUsageMessage;
+using GFLAGS_NAMESPACE::ParseCommandLineFlags;
+using GFLAGS_NAMESPACE::RegisterFlagValidator;
+using GFLAGS_NAMESPACE::SetUsageMessage;
 
 DEFINE_int32(key_size, 10, "Key size");
 DEFINE_int32(value_size, 100, "Value size");
